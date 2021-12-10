@@ -1,0 +1,1 @@
+Images folder exists just to contain images which are used in the README
