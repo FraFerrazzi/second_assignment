@@ -43,6 +43,7 @@ The objective of the assignment is to make the robot go around the race circuit.
 To implement the solution, two nodes were developed:
 * `controller_node`
 * `ui_node`
+
 Since I wrote in the first assignment some possible improvements, such as going faster or keeping the robot as centered as possible, I tried to develop this behavior in the project.
 
 ## controller_node ##
