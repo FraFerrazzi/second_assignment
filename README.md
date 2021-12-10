@@ -76,8 +76,7 @@ Pseudocode and Flowchart
 -----------------------------
 
 The relationship between the nodes is:
-
-The logic behind the code in block diagram:
+![relathionship_between_nodes](https://github.com/FraFerrazzi/second_assignment/blob/main/images/nodes%20relationship.png)
 
 The pseudo code:
 
