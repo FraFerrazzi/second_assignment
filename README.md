@@ -3,6 +3,9 @@ Assignment 2 - Race Robot
 
 This is the second assignment of the course Research Track 1, provided by Università Degli Studi di Genova, Robotics Engineering degree.
 The simulation includes a robot, placed inside a race track (Monza Circuit), equipped with a laser scanner. The robot must drive autonomously around the circuit. While doing so, he must avoid collisions, change its velocity, and reset its position depending on the user's choice.
+The simulation environment is the following:
+![simulation_environment](https://github.com/FraFerrazzi/second_assignment/blob/main/world/tracciato.png)
+This solution is developed by: Francesco Ferrazzi 5262829.
 
 Table of Contents
 ----------------------
@@ -45,6 +48,7 @@ To implement the solution, two nodes were developed:
 * `ui_node`
 
 Since I wrote in the first assignment some possible improvements, such as going faster or keeping the robot as centered as possible, I tried to develop this behavior in the project.
+
 
 ## controller_node ##
 
