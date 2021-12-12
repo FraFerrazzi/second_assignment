@@ -81,10 +81,10 @@ The user interface node prints on screen the commands that the user can choose, 
 
 Prints on the screen the commands that the user can pick from the keyboard.
 
-Pseudocode and Flowchart
+Nodes Relationship Flowchart
 -----------------------------
 
-The relationship between the nodes is:
+The relationship between the nodes is explained in the following graph:
 ![relathionship_between_nodes](https://github.com/FraFerrazzi/second_assignment/blob/main/images/nodes%20relationship.png)
 
 Possible Improvements
