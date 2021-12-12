@@ -59,7 +59,11 @@ The controller_node guarantees the assumption of the robot's correct behavior wh
 
 ### get_min_val ###
 
-The function `get_min_val` allows getting the minimum value among the elements of a given array. The whole vector is acquired thanks to the laser scan of the robot. The vector is subsequently divided into five regions of space. The aim is to allow the robot to understand where the closest obstacle is placed.
+The function `get_min_val` allows getting the minimum value among the elements of a given array. The whole vector is acquired thanks to the laser scan of the robot. The vector is subsequently divided into five regions of space. The aim is to allow the robot to understand where the closest obstacle is placed. 
+
+```
+
+```
 
 ### decide_direction ###
 
@@ -82,8 +86,6 @@ Pseudocode and Flowchart
 
 The relationship between the nodes is:
 ![relathionship_between_nodes](https://github.com/FraFerrazzi/second_assignment/blob/main/images/nodes%20relationship.png)
-
-The pseudo code:
 
 Possible Improvements
 -----------------------------
