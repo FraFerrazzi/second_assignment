@@ -76,6 +76,11 @@ int main(int argc, char **argv)
             srv_vel.request.decision = inputU;
             client_vel.waitForExistence(); // make sure the service is active
             client_vel.call(srv_vel); // Call VelService
+            if (inputU == 9)
+            {
+                ROS_INFO("EXIT");
+                exit(0);
+            }
             ROS_INFO("Robot linear velocity: %.2f", srv_vel.response.x); // Feedback to user
             ROS_INFO("Robot angular velocity: %.2f", srv_vel.response.z);
         }  

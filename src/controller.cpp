@@ -24,10 +24,10 @@ ros::Publisher pub;
 #define LEFT_DIM 160 // 40 degrees on the left
 
 // Setting thresholds
-#define L_DIFF_RIGHT_LEFT 0.13
-#define L_M_DIFF_RIGHT_LEFT 0.2
+#define L_DIFF_RIGHT_LEFT 0.08
+#define L_M_DIFF_RIGHT_LEFT 0.15
 #define M_DIFF_RIGHT_LEFT 0.32
-#define H_DIFF_RIGHT_LEFT 0.39
+#define H_DIFF_RIGHT_LEFT 0.38
 #define THRESHOLD 1.2
 #define THRESHOLD_CRASH 0.8
 #define THRESHOLD_SIDE 0.5
@@ -195,23 +195,23 @@ void decide_direction(const sensor_msgs::LaserScan::ConstPtr &msg)
             else if (min_left_front - min_right_front >= M_DIFF_RIGHT_LEFT)
             {
                 my_vel.linear.x = 0.5*linear_velocity;
-                my_vel.angular.z = 0.4*angular_velocity;
+                my_vel.angular.z = 0.35*angular_velocity;
             }
             else if (min_right_front - min_left_front > M_DIFF_RIGHT_LEFT)
             {
                 my_vel.linear.x = 0.5*linear_velocity;
-                my_vel.angular.z = -0.4*angular_velocity;
+                my_vel.angular.z = -0.35*angular_velocity;
             }
             // min distance from left and right is above a low-medium threshold: should stay as centered as possible
             else if (min_left_front - min_right_front >= L_M_DIFF_RIGHT_LEFT)
             {
                 my_vel.linear.x = 0.8*linear_velocity;
-                my_vel.angular.z = 0.2*angular_velocity;
+                my_vel.angular.z = 0.15*angular_velocity;
             }
             else if (min_right_front - min_left_front > L_M_DIFF_RIGHT_LEFT)
             {
                 my_vel.linear.x = 0.8*linear_velocity;
-                my_vel.angular.z = -0.2*angular_velocity;
+                my_vel.angular.z = -0.15*angular_velocity;
             }
             // min distance from left and right is above a low threshold: should slightly turn left and keep going
             else if (min_left_front - min_right_front >= L_DIFF_RIGHT_LEFT)
@@ -307,7 +307,6 @@ bool set_velocity (second_assignment::VelService::Request &req, second_assignmen
         // quit
         case 9:
             ROS_INFO("EXIT");
-            sleep(1);
             exit(0);
             break;
 
