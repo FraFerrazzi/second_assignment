@@ -52,9 +52,11 @@ To implement the solution, two nodes were developed:
 * `controllerrobot_node`
 * `ui_node`
 
-The `controllerrobot_node` works with stageros node. The communication between the two occurs using topics such as the `/base_scan` topic which is used to acquire the laser scan data. Another topic used in this node is the `/cmd_vel` topic that, through a publisher, defines the velocity of the robot.
+The `controllerrobot_node` works with `stageros` node. The communication between the two occurs using topics such as the `/base_scan` topic which is used to acquire the laser scan data. Another topic used in this node is the `/cmd_vel` topic that, through a publisher, defines the velocity of the robot.
 In the controller node a service is used to allow the communication between the `controllerrobot_node` and the `ui_node`. The message is received from the controller through the `/set_velocity` topic using the second_assignment::VelService.
+
 The `ui_node` is done to handle input given by user. When a command arrives, it checks that is correct. According to the input, the command can be sent to the `controllerrobot_node` using the service previously described, or can be handled by the `/reset_positions` topic that resets the robot position. 
+
 Since I wrote in the first assignment some possible improvements, such as going faster or keeping the robot as centered as possible, I tried to develop this behavior in the project.
 
 
