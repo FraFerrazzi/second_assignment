@@ -1,0 +1,6 @@
+<?xml version="1.0"?> 
+<launch>
+	 <node name="world" pkg="stage_ros" type="stageros" args="$(find second_assignment)/world/my_world.world"/> 
+	 <node name="controllerrobot_node" pkg="second_assignment" type="controllerrobot_node"/> 
+	 <node name="ui_node" pkg="second_assignment" type="ui_node" output="screen"/> 
+</launch>
