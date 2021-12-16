@@ -47,7 +47,7 @@ Be careful: `catkin_make` should be typed in the root of your ROS workspace.
 Exercise Description
 -----------------------------
 
-The objective of the assignment is to make the robot go around the race circuit. While doing so, the robot must avoid collisions with boundaries, allow the user to set its velocity, and reset its position.
+The objective of the assignment is to make the robot go around the race circuit. Meanwhile, the robot must avoid collisions with boundaries, allow the user to set its velocity, and reset its position.
 To implement the solution, two nodes were developed:
 * `controllerrobot_node`
 * `ui_node`
