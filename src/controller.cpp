@@ -126,6 +126,7 @@ float get_min_val(float vector_ranges[], int direction)
             }
         }
     }
+
     return min_dist; 
 }
 
@@ -155,7 +156,7 @@ void decide_direction(const sensor_msgs::LaserScan::ConstPtr &msg)
 	
 	geometry_msgs::Twist my_vel;
 
-	// nothing is close to the robot and the robot is well centered in the circuit
+	// nothing is close to the robot and the robot is well centered in the lane
 	if (min_front > THRESHOLD && abs(min_left - min_right) < L_DIFF_RIGHT_LEFT && min_left_front > THRESHOLD_SIDE && min_right_front > THRESHOLD_SIDE )
     {
 	    my_vel.linear.x = linear_velocity;
@@ -311,7 +312,7 @@ bool set_velocity (second_assignment::VelService::Request &req, second_assignmen
             break;
 
         default:
-            std::cout << "Not a valid input. Choose a number between 1 and 6!\n";
+            ROS_INFO("Not a valid input. Choose a number between 1 and 6! 9 to quit\n");
             break;
     }
     // check if linear and angular velocity are too high or too low

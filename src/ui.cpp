@@ -26,7 +26,7 @@ void print_ui()
 int check_user_input()
 {
     int input; // initialize variable for user input
-    std::cout << "Command: ";
+    std::cout << "\nCommand: ";
     std::cin >> input; // getting input from user
     while(std::cin.fail()) // check that cin is an int
     {
@@ -81,13 +81,14 @@ int main(int argc, char **argv)
                 ROS_INFO("EXIT");
                 exit(0);
             }
-            ROS_INFO("Robot linear velocity: %.2f", srv_vel.response.x); // Feedback to user
-            ROS_INFO("Robot angular velocity: %.2f", srv_vel.response.z);
         }  
-        sleep(2); // Let user see his decision and robot velocities
-        std::system("clear"); // Clear terminal
+        // Clear terminal
+        std::system("clear"); 
         // Calling function for UI 
         print_ui();
+        // feedback to user
+        ROS_INFO("Robot linear velocity: %.2f", srv_vel.response.x); 
+        ROS_INFO("Robot angular velocity: %.2f", srv_vel.response.z);
         ros::spinOnce();
     }
 }
